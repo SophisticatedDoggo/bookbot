@@ -6,7 +6,12 @@ def word_count(file_contents):
 
 def char_count(file_contents):
     words = file_contents
-    char_index = []
+    char_index = {}
 
     for i in range(0, len(words)):
-        if words[i] in char_count
+        character = words[i].lower()
+        if character in char_index:
+            char_index[character] = char_index[character] + 1
+        else:
+            char_index[character] = 1
+    return char_index

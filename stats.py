@@ -15,3 +15,17 @@ def char_count(file_contents):
         else:
             char_index[character] = 1
     return char_index
+
+def sort_on(dictionary):
+    return dictionary["num"]
+
+def sorted_dictionary(char_index):
+    sorted_index = []
+    for char, count in char_index.items():
+        if char.isalpha():
+            dictionary = {
+                "char": char, "num": count
+            }
+            sorted_index.append(dictionary)
+    sorted_index.sort(reverse=True, key=sort_on)
+    return sorted_index

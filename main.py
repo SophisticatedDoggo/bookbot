@@ -1,7 +1,10 @@
+from stats import word_count
+
 def main():
-    book = input("Book Filepath: ")
+    book = "books/frankenstein.txt"
     contents = get_books_text(book)
-    print(contents)
+    num_of_words = word_count(contents)
+    print(f"{num_of_words} words found in the document")
 
 def get_books_text(filepath):
     file_contents = ""
